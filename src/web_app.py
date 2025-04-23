@@ -29,7 +29,7 @@ app.layout = html.Div([
         html.Button("Predict Segment", id='predict-btn', n_clicks=0),
 
         html.Div(id='prediction-output', style={"marginTop": "20px", "fontSize": "20px"})
-    ], style={"width": "50%", "margin-bottom": "20"}),
+    ], style={"width": "50%", "margin-bottom": "20px"}),
 ])
 @app.callback(
     dash.Output('prediction-output', 'children'),
