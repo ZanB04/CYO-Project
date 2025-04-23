@@ -32,7 +32,7 @@ app.layout = html.Div([
         dcc.Input(id='total', type='number', step=1, value=1),
 
         html.Br(),
-        html.Button("Predict Segment", id='predict-btn', n_clicks=0),
+        html.Button("Predict Churn", id='predict-btn', n_clicks=0),
 
         html.Div(id='prediction-output')
     ], className = "form-box")
