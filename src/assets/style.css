@@ -46,7 +46,7 @@ button:hover {
     margin-top: 20px;
     font-size: 20px;
 }
-#prediction_output {
+#prediction-output {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
