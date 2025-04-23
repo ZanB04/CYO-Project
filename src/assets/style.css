@@ -36,7 +36,7 @@ button {
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    margin: 50%;
+    margin: 25%;
 }
   
 button:hover {
@@ -51,4 +51,5 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+    color: white;
 }
