@@ -13,23 +13,23 @@ server = app.server
 app.layout = html.Div([
     html.H1("Customer Segmentation Dashboard", style= {'textAlign': 'center'}),
     html.Div([
-        html.Label("Invoice Month"),
+        html.Label("Month of Invoice"),
         dcc.Input(id='month', type='number', min=1, max=12, step=1, value=6),
 
-        html.Label("Invoice Day"),
+        html.Label("Day of Invoice"),
         dcc.Input(id='day', type='number', min=1, max=31, step=1, value=15),
 
-        html.Label("Unit Price"),
+        html.Label("Price per Unit"),
         dcc.Input(id='price', type='number', step=0.01, value=10.0),
 
-        html.Label("Quantity"),
+        html.Label("Total Quantity Purchased"),
         dcc.Input(id='quantity', type='number', step=1, value=1),
 
         html.Br(),
         html.Button("Predict Segment", id='predict-btn', n_clicks=0),
 
         html.Div(id='prediction-output', style={"marginTop": "20px", "fontSize": "20px"})
-    ], style={"width": "50%", "margin": "auto"}),
+    ], style={"width": "50%", "margin-bottom": "20"}),
 ])
 @app.callback(
     dash.Output('prediction-output', 'children'),
