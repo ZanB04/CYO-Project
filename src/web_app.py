@@ -6,7 +6,7 @@ import pandas as pd
 import joblib
 import os
 
-kmeans = joblib.load('models/kmeans_model.pkl')
+#kmeans = joblib.load('models/kmeans_model.pkl')
 scaler = joblib.load('models/scaler.pkl')
 app = dash.Dash(__name__)
 server = app.server
@@ -42,9 +42,9 @@ app.layout = html.Div([
 def predict_segment(n_clicks, month, day, price, quantity):
     if n_clicks > 0:
         features = np.array([[month, day, price, quantity]])
-        scaled = scaler.transform(features)
-        cluster = kmeans.predict(scaled)[0]
-        return f"Preicted Customer Segment: {cluster}"
+        #scaled = scaler.transform(features)
+        #cluster = kmeans.predict(scaled)[0]
+        #return f"Predicted Customer Segment: {cluster}"
     return ""
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 8050))
